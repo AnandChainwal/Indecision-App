@@ -65,8 +65,8 @@ function addToDo(toDo, id, done, trash){
 }
 
 
-document.addEventListener("keyup",function(even){
-    if(event.keyCode == 13){
+function submit(){
+
         const toDo = input.value;
 
 
@@ -86,8 +86,7 @@ document.addEventListener("keyup",function(even){
             id++;
         }
         input.value = "";
-    }
-});
+    };
 
 
 function completeToDo(element){
@@ -120,21 +119,3 @@ list.addEventListener("click", function(event){
 
     localStorage.setItem("TODO", JSON.stringify(LIST));
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
